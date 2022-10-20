@@ -1,38 +1,58 @@
 * {
   box-sizing: border-box;
 }
+/*pagina toda*/
 body {
   background-color: #eef9bf;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
+/*topo, contem titulo*/
 header {
   margin: 40px 0px;
 }
+/*titulo*/
 h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 56px;
   color: #75b79e;
 }
+/*tudo abaixo do titulo*/
 main {
-  width: 80%;
+  width: 85%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
-.carta {
+/*container das cartas*/
+ul{
+  background-color: red;
+  width: 100%;
+  height: 360px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*cartas*/
+li {
   background-color: #a7e9af;
   width: 117px;
   height: 146px;
-  margin: 0 17px;
+  margin: 17px 0;
   border: 1px solid #99cea8;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.carta img {
+/*imagem da carta*/
+li img {
   width: 100px;
   height: 100px;
 }

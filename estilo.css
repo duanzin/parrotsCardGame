@@ -31,7 +31,6 @@ main {
 }
 /*container das cartas*/
 ul{
-  background-color: red;
   width: 100%;
   height: 360px;
   display: flex;
@@ -51,29 +50,24 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-/*imagem da carta*/
-li img {
-  width: 100px;
-  height: 100px;
-}
-/*ambos os lados*/
-.carta{
-  position: relative;
-}
-/*carta nãõ virada,nãõ clicada*/
-.naovirada{
-  position: absolute;
-  backface-visibility: hidden;
   transition: all .5s;
   transform-style: preserve-3d;
+  position: relative;
 }
-.naovirada:active{
-  transform: rotateY(-180deg);
-}
-/*carta virada, clicada*/
 .virada{
+    transform: rotateY(180deg);
+}
+/*dois lados da carta*/
+.naovirada, .virada{
+  background-color: #a7e9af;
+  width: 100%;
+  height: 100%;
+  padding: 23px 8px;
+  position: absolute;
   backface-visibility: hidden;
+}
+li.vira {
+  transform: rotateY(180deg);
 }
 /*muda organização das cartas quando a tela ficar menor que 335px*/
 /*pagina não responsiva, apenas versão fullscreen e mobile*/

@@ -19,6 +19,7 @@ h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 56px;
+  text-align: center;
   color: #75b79e;
 }
 /*tudo abaixo do titulo*/
@@ -39,7 +40,7 @@ ul{
   justify-content: center;
   align-items: center;
 }
-/*cartas*/
+/*dois lados dascartas*/
 li {
   background-color: #a7e9af;
   width: 117px;
@@ -55,4 +56,29 @@ li {
 li img {
   width: 100px;
   height: 100px;
+}
+/*ambos os lados*/
+.carta{
+  position: relative;
+}
+/*carta nãõ virada,nãõ clicada*/
+.naovirada{
+  position: absolute;
+  backface-visibility: hidden;
+  transition: all .5s;
+  transform-style: preserve-3d;
+}
+.naovirada:active{
+  transform: rotateY(-180deg);
+}
+/*carta virada, clicada*/
+.virada{
+  backface-visibility: hidden;
+}
+/*muda organização das cartas quando a tela ficar menor que 335px*/
+/*pagina não responsiva, apenas versão fullscreen e mobile*/
+@media screen and (max-width: 335px){
+  ul {
+    height: 100%;
+  }
 }
